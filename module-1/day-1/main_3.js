@@ -2,7 +2,7 @@ let n = 3;
 
 
 if(n % 2 === 0){
-    console.log("Số Chẵn");
+    console.log("So chan");
 }else{
-    console.log("Số lẻ");
+    console.log("So le");
 }

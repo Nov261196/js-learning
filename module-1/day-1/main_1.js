@@ -2,4 +2,6 @@ let name = "MK";
 let age = 18;
 let isStudent = true;
 
-console.log(name, age, isStudent);
+console.log("Name:", name);
+console.log("Age:",age);
+console.log("Student:",isStudent);
