@@ -9,4 +9,4 @@ function isPrime(n) {
 }
 
 
-console.log(isPrime(8));
+console.log(isPrime(11));
