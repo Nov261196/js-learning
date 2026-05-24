@@ -7,4 +7,4 @@ for(let i = 0; i < numbers.length; i++){
     }
 }
 
-console.log(max)
+console.log(max);
