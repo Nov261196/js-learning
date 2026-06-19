@@ -1,5 +1,5 @@
-const createStudent = () => ({
-    nam: "An",
+const createStudent = (name, age) => ({
+    name: "An",
     age: 8,
 });
 
