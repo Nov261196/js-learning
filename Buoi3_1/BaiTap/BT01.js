@@ -1,0 +1,14 @@
+const sumAll = (...numbers) => {
+    let total = 0;
+    
+    for (const num of numbers) {
+        total += num;
+    }
+    return total;
+};
+
+console.log(sumAll(1, 2, 3));         
+console.log(sumAll(10, 20, 30, 40));  
+console.log(sumAll(5));               
+console.log(sumAll());               
+
