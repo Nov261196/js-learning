@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muscle Car Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header & Bộ lọc tìm kiếm -->
+    <header>
+      <div class="container">
+        <h1 style="color: rgb(246, 32, 189)">Muscle Car Shop</h1>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm kiếm xe theo tên..."
+          />
+          <select id="filterSelect">
+            <option value="all">Tất cả danh mục</option>
+            <option value="mustang">Ford Mustang</option>
+            <option value="dodge">Dodge</option>
+            <option value="classic">Bản cổ điển</option>
+          </select>
+        </div>
+        <div class="cart-status">
+          <span class="cart-label">Giỏ hàng</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Khối hiển thị sản phẩm -->
+    <main class="container">
+      <h2 class="section-title">Danh Sách Mustang Và Dodge Nổi Bật</h2>
+      <div class="product-grid" id="productGrid">
+        <!-- Dữ liệu sản phẩm sẽ được JavaScript tự động render vào đây -->
+      </div>
+      <section class="cart-panel">
+        <h2 class="section-title">Giỏ Hàng Của Bạn</h2>
+        <div class="cart-list" id="cartList">
+          <p class="empty-state">Chưa có sản phẩm nào trong giỏ hàng.</p>
+        </div>
+        <div class="cart-summary">
+          <span>Tổng cộng:</span>
+          <strong id="cartTotal">0 đ</strong>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 Muscle Car Shop - Bài thực hành xây dựng website danh sách
+        xe Mustang và Dodge.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

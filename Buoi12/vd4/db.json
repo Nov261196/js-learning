@@ -1,0 +1,472 @@
+{
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "Laptop & Máy tính",
+      "slug": "laptop",
+      "description": "Máy tính xách tay, Ultrabook, Laptop Gaming và Workstation cao cấp"
+    },
+    {
+      "id": "cat-2",
+      "name": "Điện thoại & Tablet",
+      "slug": "smartphone",
+      "description": "Smartphone flagship, iPhone, Android cao cấp và máy tính bảng"
+    },
+    {
+      "id": "cat-3",
+      "name": "Phụ kiện & Gaming Gear",
+      "slug": "accessories",
+      "description": "Bàn phím cơ, chuột công thái học, tai nghe gaming và dock chuyển đổi"
+    },
+    {
+      "id": "cat-4",
+      "name": "Âm thanh & Tai nghe",
+      "slug": "audio",
+      "description": "Tai nghe chống ồn không dây, tai nghe audiophile và loa Bluetooth cao cấp"
+    },
+    {
+      "id": "cat-5",
+      "name": "Màn hình & Thiết bị hiển thị",
+      "slug": "monitors",
+      "description": "Màn hình đồ họa 4K, màn hình gaming 240Hz và màn hình Ultrawide"
+    },
+    {
+      "id": "cat-6",
+      "name": "Linh kiện PC & Lưu trữ",
+      "slug": "components",
+      "description": "Ổ cứng SSD NVMe tốc độ cao, RAM DDR5 và card đồ họa chuyên nghiệp"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "MacBook Pro 14 inch M3 Pro (18GB / 512GB SSD)",
+      "price": 49990000,
+      "categoryId": "cat-1",
+      "brand": "Apple",
+      "inStock": true,
+      "stockQuantity": 15,
+      "rating": 4.9,
+      "reviewCount": 48,
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600",
+      "description": "Chip Apple M3 Pro 11-core CPU, 14-core GPU, màn hình Liquid Retina XDR 120Hz siêu nét."
+    },
+    {
+      "id": "prod-2",
+      "name": "Dell XPS 13 Plus 9320 OLED (Core i7-1360P / 16GB / 1TB)",
+      "price": 38500000,
+      "categoryId": "cat-1",
+      "brand": "Dell",
+      "inStock": true,
+      "stockQuantity": 8,
+      "rating": 4.6,
+      "reviewCount": 24,
+      "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=600",
+      "description": "Thiết kế tương lai với Touch Bar cảm ứng vô hình, màn hình OLED 3.5K viền siêu mỏng."
+    },
+    {
+      "id": "prod-3",
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 (Core i7 / 32GB / 1TB)",
+      "price": 42990000,
+      "categoryId": "cat-1",
+      "brand": "Lenovo",
+      "inStock": true,
+      "stockQuantity": 6,
+      "rating": 4.8,
+      "reviewCount": 19,
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600",
+      "description": "Chuẩn mực laptop doanh nhân cao cấp sợi carbon siêu nhẹ 1.12kg, bàn phím đỉnh cao."
+    },
+    {
+      "id": "prod-4",
+      "name": "Asus ROG Zephyrus G16 OLED (Core Ultra 9 / RTX 4070 / 32GB)",
+      "price": 56990000,
+      "categoryId": "cat-1",
+      "brand": "Asus",
+      "inStock": false,
+      "stockQuantity": 0,
+      "rating": 4.9,
+      "reviewCount": 35,
+      "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600",
+      "description": "Laptop Gaming mỏng nhẹ nhất thế giới màn hình ROG Nebula OLED 2.5K 240Hz."
+    },
+    {
+      "id": "prod-5",
+      "name": "MacBook Air 13 inch M2 (8GB / 256GB SSD) Midnight",
+      "price": 24490000,
+      "categoryId": "cat-1",
+      "brand": "Apple",
+      "inStock": true,
+      "stockQuantity": 28,
+      "rating": 4.8,
+      "reviewCount": 112,
+      "image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=600",
+      "description": "Thời lượng pin 18 tiếng liên tục, thiết kế mỏng nhẹ không quạt tản nhiệt hoàn toàn yên tĩnh."
+    },
+    {
+      "id": "prod-6",
+      "name": "iPhone 15 Pro Max 256GB Titan Tự Nhiên",
+      "price": 29990000,
+      "categoryId": "cat-2",
+      "brand": "Apple",
+      "inStock": true,
+      "stockQuantity": 18,
+      "rating": 4.9,
+      "reviewCount": 215,
+      "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600",
+      "description": "Khung viền Titan chuẩn hàng không vũ trụ, chip A17 Pro chơi game AAA đỉnh cao, camera tiềm vọng 5x."
+    },
+    {
+      "id": "prod-7",
+      "name": "Samsung Galaxy S24 Ultra 512GB Galaxy AI",
+      "price": 27990000,
+      "categoryId": "cat-2",
+      "brand": "Samsung",
+      "inStock": true,
+      "stockQuantity": 22,
+      "rating": 4.7,
+      "reviewCount": 89,
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600",
+      "description": "Tích hợp quyền năng Galaxy AI dịch thuật trực tiếp, màn hình phẳng chống chói và bút S-Pen."
+    },
+    {
+      "id": "prod-8",
+      "name": "iPad Pro 11 inch M4 Ultra OLED 256GB Wi-Fi",
+      "price": 27490000,
+      "categoryId": "cat-2",
+      "brand": "Apple",
+      "inStock": false,
+      "stockQuantity": 0,
+      "rating": 4.9,
+      "reviewCount": 42,
+      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600",
+      "description": "Thiết bị mỏng nhất lịch sử Apple 5.3mm với màn hình Ultra Retina XDR công nghệ Tandem OLED."
+    },
+    {
+      "id": "prod-9",
+      "name": "Xiaomi 14 Ultra Leica Optics (16GB / 512GB)",
+      "price": 26990000,
+      "categoryId": "cat-2",
+      "brand": "Xiaomi",
+      "inStock": true,
+      "stockQuantity": 7,
+      "rating": 4.6,
+      "reviewCount": 16,
+      "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600",
+      "description": "Hệ thống 4 camera Leica cảm biến 1 inch khẩu độ biến thiên vô cấp từ f/1.63 đến f/4.0."
+    },
+    {
+      "id": "prod-10",
+      "name": "Bàn phím cơ không dây Keychron K2 Pro QMK/VIA",
+      "price": 2150000,
+      "categoryId": "cat-3",
+      "brand": "Keychron",
+      "inStock": true,
+      "stockQuantity": 45,
+      "rating": 4.8,
+      "reviewCount": 78,
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600",
+      "description": "Hotswap switch cơ khí cao cấp, kết nối Bluetooth 5.1 3 thiết bị cùng lúc, tương thích macOS/Windows."
+    },
+    {
+      "id": "prod-11",
+      "name": "Chuột công thái học không dây Logitech MX Master 3S",
+      "price": 2450000,
+      "categoryId": "cat-3",
+      "brand": "Logitech",
+      "inStock": true,
+      "stockQuantity": 60,
+      "rating": 4.9,
+      "reviewCount": 140,
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600",
+      "description": "Con lăn từ tính MagSpeed cuộn 1000 dòng/giây, click tĩnh âm Quiet Clicks và cảm biến 8K DPI."
+    },
+    {
+      "id": "prod-12",
+      "name": "Bàn phím cơ Custom MonsGeek M1W V3 Wireless",
+      "price": 1890000,
+      "categoryId": "cat-3",
+      "brand": "MonsGeek",
+      "inStock": true,
+      "stockQuantity": 15,
+      "rating": 4.7,
+      "reviewCount": 33,
+      "image": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=600",
+      "description": "Vỏ nhôm CNC nguyên khối anode hóa, cấu trúc Gasket Mount êm ái và núm xoay kim loại chỉnh âm lượng."
+    },
+    {
+      "id": "prod-13",
+      "name": "Tai nghe chống ồn không dây Sony WH-1000XM5",
+      "price": 7990000,
+      "categoryId": "cat-4",
+      "brand": "Sony",
+      "inStock": true,
+      "stockQuantity": 20,
+      "rating": 4.9,
+      "reviewCount": 95,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600",
+      "description": "2 vi xử lý điều khiển 8 micro khử ồn chủ động đỉnh cao, âm thanh Hi-Res Audio chuẩn LDAC."
+    },
+    {
+      "id": "prod-14",
+      "name": "Loa Bluetooth Marshall Stanmore III Vintage",
+      "price": 9200000,
+      "categoryId": "cat-4",
+      "brand": "Marshall",
+      "inStock": true,
+      "stockQuantity": 9,
+      "rating": 4.8,
+      "reviewCount": 54,
+      "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600",
+      "description": "Âm trường rộng hơn thế hệ trước, thiết kế mang tính biểu tượng với logo mạ vàng cổ điển."
+    },
+    {
+      "id": "prod-15",
+      "name": "Tai nghe Apple AirPods Pro 2 (USB-C)",
+      "price": 5490000,
+      "categoryId": "cat-4",
+      "brand": "Apple",
+      "inStock": true,
+      "stockQuantity": 35,
+      "rating": 4.8,
+      "reviewCount": 160,
+      "image": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600",
+      "description": "Khử ồn chủ động gấp 2 lần, âm thanh thích ứng Adaptive Audio và cổng sạc chuẩn USB-C mới."
+    },
+    {
+      "id": "prod-16",
+      "name": "Màn hình đồ họa LG UltraFine 27 inch 4K IPS (27UP850)",
+      "price": 8990000,
+      "categoryId": "cat-5",
+      "brand": "LG",
+      "inStock": true,
+      "stockQuantity": 12,
+      "rating": 4.7,
+      "reviewCount": 42,
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600",
+      "description": "Độ bao phủ màu 95% DCI-P3, HDR400, cổng USB-C truyền hình ảnh kiêm sạc ngược 96W cho MacBook."
+    },
+    {
+      "id": "prod-17",
+      "name": "Màn hình cong Samsung Odyssey G9 OLED 49 inch 240Hz",
+      "price": 31990000,
+      "categoryId": "cat-5",
+      "brand": "Samsung",
+      "inStock": false,
+      "stockQuantity": 0,
+      "rating": 4.9,
+      "reviewCount": 18,
+      "image": "https://images.unsplash.com/photo-1585792180666-f7347c490ee2?w=600",
+      "description": "Tỷ lệ siêu rộng 32:9 độ cong 1800R, thời gian phản hồi 0.03ms mang lại trải nghiệm đắm chìm."
+    },
+    {
+      "id": "prod-18",
+      "name": "Màn hình Dell UltraSharp 32 inch 4K (U3223QE) IPS Black",
+      "price": 17500000,
+      "categoryId": "cat-5",
+      "brand": "Dell",
+      "inStock": true,
+      "stockQuantity": 10,
+      "rating": 4.8,
+      "reviewCount": 27,
+      "image": "https://images.unsplash.com/photo-1547119957-637f8679db1e?w=600",
+      "description": "Công nghệ IPS Black độ tương phản 2000:1 đầu tiên trên thế giới, màu đen sâu thẳm chuẩn xác."
+    },
+    {
+      "id": "prod-19",
+      "name": "Ổ cứng SSD Samsung 990 Pro 2TB PCIe Gen 4.0 NVMe",
+      "price": 4650000,
+      "categoryId": "cat-6",
+      "brand": "Samsung",
+      "inStock": true,
+      "stockQuantity": 50,
+      "rating": 4.9,
+      "reviewCount": 85,
+      "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600",
+      "description": "Tốc độ đọc tuần tự lên đến 7,450 MB/s, kiểm soát nhiệt thông minh tối ưu cho PS5 và PC đồ họa."
+    },
+    {
+      "id": "prod-20",
+      "name": "Card màn hình ASUS ROG Strix GeForce RTX 4070 Ti SUPER 16GB",
+      "price": 28990000,
+      "categoryId": "cat-6",
+      "brand": "Asus",
+      "inStock": true,
+      "stockQuantity": 5,
+      "rating": 4.9,
+      "reviewCount": 21,
+      "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600",
+      "description": "Kiến trúc Ada Lovelace, công nghệ DLSS 3 trí tuệ nhân tạo tăng tốc khung hình chơi game 4K mượt mà."
+    },
+    {
+      "id": "prod-21",
+      "name": "RAM Corsair Dominator Titanium RGB 32GB (2x16GB) DDR5 6000MHz",
+      "price": 4250000,
+      "categoryId": "cat-6",
+      "brand": "Corsair",
+      "inStock": true,
+      "stockQuantity": 30,
+      "rating": 4.8,
+      "reviewCount": 39,
+      "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=600",
+      "description": "Thiết kế nắp tản nhiệt tháo rời cao cấp, chip nhớ tuyển chọn cho khả năng ép xung đỉnh cao."
+    },
+    {
+      "id": "prod-22",
+      "name": "Nguồn máy tính Corsair RM850x 850W 80 Plus Gold Modular",
+      "price": 3450000,
+      "categoryId": "cat-6",
+      "brand": "Corsair",
+      "inStock": true,
+      "stockQuantity": 16,
+      "rating": 4.8,
+      "reviewCount": 44,
+      "image": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=600",
+      "description": "100% tụ điện Nhật Bản 105°C, quạt đệm từ 135mm vận hành êm ái ở chế độ Zero RPM."
+    },
+    {
+      "id": "prod-23",
+      "name": "Apple Watch Ultra 2 GPS + Cellular 49mm Titanium",
+      "price": 20490000,
+      "categoryId": "cat-3",
+      "brand": "Apple",
+      "inStock": true,
+      "stockQuantity": 11,
+      "rating": 4.9,
+      "reviewCount": 58,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600",
+      "description": "Đồng hồ thám hiểm chuyên nghiệp độ sáng màn hình 3000 nits, định vị GPS tần số kép chính xác."
+    },
+    {
+      "id": "prod-24",
+      "name": "Webcam Elgato Facecam Pro 4K60 Ultra HD",
+      "price": 7890000,
+      "categoryId": "cat-3",
+      "brand": "Elgato",
+      "inStock": true,
+      "stockQuantity": 8,
+      "rating": 4.7,
+      "reviewCount": 19,
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600",
+      "description": "Webcam đầu tiên trên thế giới quay video 4K 60 khung hình/giây không nén chuẩn phòng thu."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "productId": "prod-1",
+      "author": "Đặng Văn Lâm",
+      "rating": 5,
+      "comment": "Máy chạy siêu mát và pin cực trâu! Render video 4K nhanh gấp 3 lần chiếc máy cũ.",
+      "createdAt": "2026-08-15T09:30:00Z"
+    },
+    {
+      "id": "rev-2",
+      "productId": "prod-1",
+      "author": "Trần Thị Mai",
+      "rating": 5,
+      "comment": "Màn hình Liquid Retina XDR quá đẹp, loa ngoài to và có chiều sâu.",
+      "createdAt": "2026-08-18T14:20:00Z"
+    },
+    {
+      "id": "rev-3",
+      "productId": "prod-6",
+      "author": "Nguyễn Hoàng Nam",
+      "rating": 5,
+      "comment": "Màu Titan Tự Nhiên cầm rất nhẹ tay và sang trọng. Camera chụp đêm cực kỳ sắc nét.",
+      "createdAt": "2026-08-20T11:15:00Z"
+    },
+    {
+      "id": "rev-4",
+      "productId": "prod-7",
+      "author": "Lê Bảo Ngọc",
+      "rating": 4,
+      "comment": "Tính năng khoanh vùng tìm kiếm AI và dịch trực tiếp cuộc gọi rất tiện lợi.",
+      "createdAt": "2026-08-21T16:45:00Z"
+    },
+    {
+      "id": "rev-5",
+      "productId": "prod-11",
+      "author": "Phạm Quốc Hưng",
+      "rating": 5,
+      "comment": "Chuột làm việc đỉnh cao nhất mình từng dùng. Bánh lăn mượt mà không phát ra tiếng ồn.",
+      "createdAt": "2026-08-22T08:10:00Z"
+    },
+    {
+      "id": "rev-6",
+      "productId": "prod-13",
+      "author": "Vũ Thu Trang",
+      "rating": 5,
+      "comment": "Chống ồn tốt nhất hiện nay, đeo đi máy bay hoặc ngồi quán cà phê không nghe tiếng ồn xung quanh.",
+      "createdAt": "2026-08-23T10:05:00Z"
+    },
+    {
+      "id": "rev-7",
+      "productId": "prod-19",
+      "author": "Bùi Tuấn Anh",
+      "rating": 5,
+      "comment": "Lắp vào PS5 chạy mượt mà, load game Spider-Man trong chưa đầy 2 giây!",
+      "createdAt": "2026-08-24T07:50:00Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-1",
+      "name": "Nguyễn Thành Long",
+      "email": "long.nguyen@example.com",
+      "role": "VIP",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120"
+    },
+    {
+      "id": "usr-2",
+      "name": "Trần Hải Yến",
+      "email": "yen.tran@example.com",
+      "role": "REGULAR",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120"
+    },
+    {
+      "id": "usr-3",
+      "name": "Lê Quốc Bảo (Admin)",
+      "email": "admin@techstore.vn",
+      "role": "ADMIN",
+      "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=120"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-1001",
+      "userId": "usr-1",
+      "customerName": "Nguyễn Thành Long",
+      "items": [
+        { "productId": "prod-1", "name": "MacBook Pro 14 inch M3 Pro", "quantity": 1, "price": 49990000 }
+      ],
+      "totalAmount": 49990000,
+      "status": "COMPLETED",
+      "createdAt": "2026-08-22T10:30:00Z"
+    },
+    {
+      "id": "ORD-1002",
+      "userId": "usr-2",
+      "customerName": "Trần Hải Yến",
+      "items": [
+        { "productId": "prod-11", "name": "Chuột Logitech MX Master 3S", "quantity": 1, "price": 2450000 },
+        { "productId": "prod-10", "name": "Bàn phím Keychron K2 Pro", "quantity": 1, "price": 2150000 }
+      ],
+      "totalAmount": 4600000,
+      "status": "SHIPPING",
+      "createdAt": "2026-08-23T15:20:00Z"
+    },
+    {
+      "id": "ORD-1003",
+      "userId": "usr-1",
+      "customerName": "Nguyễn Thành Long",
+      "items": [
+        { "productId": "prod-13", "name": "Tai nghe Sony WH-1000XM5", "quantity": 1, "price": 7990000 }
+      ],
+      "totalAmount": 7990000,
+      "status": "PROCESSING",
+      "createdAt": "2026-08-24T09:10:00Z"
+    }
+  ],
+  "cart": []
+}

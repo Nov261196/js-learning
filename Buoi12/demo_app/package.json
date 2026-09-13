@@ -1,0 +1,23 @@
+{
+  "name": "buoi-16-demo-store-admin",
+  "version": "1.0.0",
+  "description": "Ứng dụng mẫu quản lý sản phẩm với Async/Await, Fetch API và JSON-Server",
+  "main": "index.html",
+  "scripts": {
+    "start": "json-server db.json --port 3000 --static .",
+    "dev": "json-server db.json --port 3000 --static .",
+    "api-only": "json-server db.json --port 3000"
+  },
+  "keywords": [
+    "javascript",
+    "async-await",
+    "json-server",
+    "rest-api",
+    "crud"
+  ],
+  "author": "Teaching JS Curriculum",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.15"
+  }
+}

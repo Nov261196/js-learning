@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <header class="hero">
+            <p class="eyebrow">Buổi 13 · Arrays ES6</p>
+            <h1>Student Data Dashboard</h1>
+            <p>Tìm kiếm, lọc, sắp xếp và thống kê từ một nguồn dữ liệu.</p>
+        </header>
+        <section class="stats" aria-label="Thống kê">
+            <article class="stat-card">
+                <span>Tổng sinh viên</span>
+                <strong id="totalValue">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Điểm trung bình</span>
+                <strong id="averageValue">0.00</strong>
+            </article>
+            <article class="stat-card success">
+                <span>Đạt</span>
+                <strong id="passedValue">0</strong>
+            </article>
+            <article class="stat-card danger">
+                <span>Chưa đạt</span>
+                <strong id="failedValue">0</strong>
+            </article>
+        </section>
+        <section class="panel controls" aria-label="Bộ lọc">
+            <label>
+                Tìm theo tên hoặc mã
+                <input id="searchInput" type="search" placeholder="Ví dụ: An hoặc SV01">
+            </label>
+            <label>
+                Trạng thái
+                <select id="statusSelect">
+                    <option value="all">Tất cả</option>
+                    <option value="passed">Đạt</option>
+                    <option value="failed">Chưa đạt</option>
+                </select>
+            </label>
+            <label>
+                Sắp xếp
+                <select id="sortSelect">
+                    <option value="scoreDesc">Điểm giảm dần</option>
+                    <option value="scoreAsc">Điểm tăng dần</option>
+                    <option value="nameAsc">Tên A-Z</option>
+                </select>
+            </label>
+        </section>
+        <section class="panel table-panel">
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã</th>
+                            <th>Họ tên</th>
+                            <th>Lớp</th>
+                            <th>Điểm</th>
+                            <th>Xếp loại</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentBody"></tbody>
+                </table>
+            </div>
+            <p id="emptyState" class="empty" hidden>Không có dữ liệu phù hợp.</p>
+            <nav class="pagination" aria-label="Phân trang">
+                <button id="prevButton" type="button">Trang trước</button>
+                <span id="pageInfo">Trang 1 / 1</span>
+                <button id="nextButton" type="button">Trang sau</button>
+            </nav>
+        </section>
+        <section class="panel">
+            <h2>Phân bố xếp loại</h2>
+            <div id="chart" class="chart" aria-label="Biểu đồ phân bố xếp loại"></div>
+        </section>
+    </main>
+</body>
+
+</html>

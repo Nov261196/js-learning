@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ứng dụng quản lý sinh viên bằng ES6 modules">
+    <title>Student Manager</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <p class="eyebrow">THỰC HÀNH ES6 MODULES</p>
+            <h1>Student Manager</h1>
+            <p>Quản lý danh sách, kết quả và thống kê sinh viên.</p>
+        </div>
+    </header>
+    <main class="container app-layout">
+        <section class="card card--form" aria-labelledby="form-title">
+            <h2 id="form-title">Thêm sinh viên</h2>
+            <div class="demo-actions">
+                <button id="load-demo" class="button button--secondary" type="button">Import</button>
+                <button id="clear-all" class="button button--ghost" type="button">Xóa toàn bộ</button>
+            </div>
+            <p id="demo-message" class="message" aria-live="polite" hidden></p>
+            <form id="student-form" class="student-form" novalidate>
+                <div class="field">
+                    <label for="student-id">Mã sinh viên</label>
+                    <input id="student-id" name="studentId" placeholder="VD: SV01" required>
+                </div>
+                <div class="field">
+                    <label for="student-name">Họ và tên</label>
+                    <input id="student-name" name="studentName" placeholder="Nguyễn Văn An" required>
+                </div>
+                <div class="field">
+                    <label for="class-name">Lớp</label>
+                    <input id="class-name" name="className" placeholder="CDJS01" required>
+                </div>
+                <div class="field">
+                    <label for="student-score">Điểm</label>
+                    <input id="student-score" name="score" type="number" min="0" max="10" step="0.1" required>
+                </div>
+                <button class="button button--primary" type="submit">Thêm sinh viên</button>
+                <p id="form-message" class="message" aria-live="polite" hidden></p>
+            </form>
+        </section>
+        <section class="card card--stats" aria-labelledby="stats-title">
+            <h2 id="stats-title">Thống kê nhanh</h2>
+            <div class="stats-grid">
+                <article class="stat"><span>Tổng số</span><strong id="stat-total">0</strong></article>
+                <article class="stat"><span>Đạt</span><strong id="stat-passed">0</strong></article>
+                <article class="stat"><span>Chưa đạt</span><strong id="stat-failed">0</strong></article>
+                <article class="stat"><span>Điểm TB</span><strong id="stat-average">0.00</strong></article>
+            </div>
+        </section>
+        <section class="card card--report" aria-labelledby="report-title">
+            <h2 id="report-title">Báo cáo học tập</h2>
+            <p id="report-summary" class="report-summary">Chưa có dữ liệu để lập báo cáo.</p>
+            <div class="report-grid">
+                <article class="report-stat report-stat--highlight">
+                    <span>Điểm cao nhất</span>
+                    <strong id="report-highest-name">-</strong>
+                    <p id="report-highest-score">-</p>
+                </article>
+                <article class="report-stat">
+                    <span>Điểm thấp nhất</span>
+                    <strong id="report-lowest-name">-</strong>
+                    <p id="report-lowest-score">-</p>
+                </article>
+            </div>
+            <div class="report-distribution">
+                <article class="report-tag"><span>Giỏi</span><strong id="report-gioi">0</strong></article>
+                <article class="report-tag"><span>Khá</span><strong id="report-kha">0</strong></article>
+                <article class="report-tag"><span>Trung bình</span><strong id="report-trung-binh">0</strong></article>
+                <article class="report-tag"><span>Yếu</span><strong id="report-yeu">0</strong></article>
+            </div>
+        </section>
+        <section class="card card--wide card--list" aria-labelledby="list-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="list-title">Danh sách sinh viên</h2>
+                    <p id="result-count">0 kết quả</p>
+                </div>
+                <div class="filters" aria-label="Công cụ lọc danh sách">
+                    <label class="sr-only" for="search-input">Tìm sinh viên</label>
+                    <input id="search-input" type="search" placeholder="Tìm mã hoặc tên...">
+                    <label class="sr-only" for="status-filter">Lọc theo kết quả</label>
+                    <select id="status-filter">
+                        <option value="all">Tất cả</option>
+                        <option value="passed">Đạt</option>
+                        <option value="failed">Chưa đạt</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã SV</th>
+                            <th>Họ tên</th>
+                            <th>Lớp</th>
+                            <th>Điểm</th>
+                            <th>Xếp loại</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-list"></tbody>
+                </table>
+                <p id="empty-state" class="empty-state">Chưa có sinh viên phù hợp.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">Buổi 9 - Thực hành ES6 Modules</footer>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

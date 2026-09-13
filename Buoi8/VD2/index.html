@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <style>
+        :root {
+            --bg-1: #f4efe6;
+            --bg-2: #d9e6df;
+            --panel: #1f252d;
+            --panel-2: #161b22;
+            --screen: #0f1419;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --key-main: #2b3440;
+            --key-main-hover: #374150;
+            --key-soft: #d7dde5;
+            --key-soft-hover: #c5ced8;
+            --key-soft-text: #17202a;
+            --key-accent: #d97706;
+            --key-accent-hover: #ea8f1d;
+            --shadow: 0 30px 80px rgba(23, 32, 42, 0.22);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100dvh;
+            display: grid;
+            place-items: center;
+            padding: 16px;
+            font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 30%),
+                linear-gradient(135deg, var(--bg-1), var(--bg-2));
+        }
+
+        .calculator-shell {
+            width: min(100%, 420px);
+        }
+
+        .calculator {
+            padding: 18px;
+            border-radius: 30px;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 18%),
+                linear-gradient(180deg, var(--panel), var(--panel-2));
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .calculator-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .calculator-title {
+            margin: 0;
+            color: var(--text);
+            font-size: 28px;
+            line-height: 1.05;
+        }
+
+        .display {
+            padding: 18px;
+            border-radius: 24px;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 24%),
+                var(--screen);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .expression {
+            min-height: 28px;
+            color: var(--muted);
+            text-align: right;
+            font-size: clamp(18px, 4vw, 28px);
+            word-break: break-word;
+        }
+
+        .result {
+            margin-top: 10px;
+            color: var(--text);
+            text-align: right;
+            font-size: clamp(42px, 10vw, 64px);
+            font-weight: 700;
+            line-height: 1.05;
+            word-break: break-word;
+        }
+
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .key {
+            border: none;
+            min-height: 74px;
+            border-radius: 22px;
+            font-size: clamp(20px, 5vw, 28px);
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.12s ease, box-shadow 0.12s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .key:focus-visible {
+            outline: 3px solid rgba(255, 255, 255, 0.28);
+            outline-offset: -3px;
+        }
+
+        .key--main {
+            background: var(--key-main);
+            color: var(--text);
+        }
+
+        .key--main:hover {
+            background: var(--key-main-hover);
+        }
+
+        .key--soft {
+            background: var(--key-soft);
+            color: var(--key-soft-text);
+        }
+
+        .key--soft:hover {
+            background: var(--key-soft-hover);
+        }
+
+        .key--accent {
+            background: var(--key-accent);
+            color: #fff7ed;
+        }
+
+        .key--accent:hover {
+            background: var(--key-accent-hover);
+        }
+
+        .key--equals {
+            box-shadow: inset 0 -6px 14px rgba(0, 0, 0, 0.16);
+        }
+
+        @media (max-width: 420px) {
+            body {
+                padding: 10px;
+            }
+
+            .calculator {
+                padding: 14px;
+                border-radius: 24px;
+            }
+
+            .calculator-header {
+                margin-bottom: 14px;
+            }
+
+            .display {
+                padding: 14px;
+                border-radius: 18px;
+            }
+
+            .keypad {
+                gap: 10px;
+            }
+
+            .key {
+                min-height: 64px;
+                border-radius: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator-shell">
+        <div class="calculator">
+            <div class="calculator-header">
+                <h1 class="calculator-title">Calculator</h1>
+            </div>
+
+            <div class="display">
+                <div id="expression" class="expression"></div>
+                <div id="resultValue" class="result">0</div>
+            </div>
+
+            <div class="keypad">
+                <button type="button" class="key key--soft" data-action="backspace">⌫</button>
+                <button type="button" class="key key--soft" data-action="clear">AC</button>
+                <button type="button" class="key key--soft" data-action="percent">%</button>
+                <button type="button" class="key key--accent" data-operator="/">÷</button>
+
+                <button type="button" class="key key--main" data-number="7">7</button>
+                <button type="button" class="key key--main" data-number="8">8</button>
+                <button type="button" class="key key--main" data-number="9">9</button>
+                <button type="button" class="key key--accent" data-operator="*">×</button>
+
+                <button type="button" class="key key--main" data-number="4">4</button>
+                <button type="button" class="key key--main" data-number="5">5</button>
+                <button type="button" class="key key--main" data-number="6">6</button>
+                <button type="button" class="key key--accent" data-operator="-">−</button>
+
+                <button type="button" class="key key--main" data-number="1">1</button>
+                <button type="button" class="key key--main" data-number="2">2</button>
+                <button type="button" class="key key--main" data-number="3">3</button>
+                <button type="button" class="key key--accent" data-operator="+">+</button>
+
+                <button type="button" class="key key--main" data-action="toggle-sign">+/−</button>
+                <button type="button" class="key key--main" data-number="0">0</button>
+                <button type="button" class="key key--main" data-action="decimal">.</button>
+                <button type="button" class="key key--accent key--equals" data-action="equals">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
