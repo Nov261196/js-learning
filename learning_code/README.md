@@ -34,3 +34,16 @@ Lộ trình từ JavaScript cơ bản đến đủ nền tảng chuyển sang Re
 - Mỗi bài có README hướng dẫn và `index.js` để thực hành.
 - Bài có giao diện được chuẩn bị thêm `index.html` và `style.css`.
 - Học theo thứ tự module để tránh thiếu kiến thức nền.
+
+
+## Cách sử dụng exercises
+
+Mỗi bài học có thư mục `exercises`:
+
+1. Đọc mục “Bài này để làm gì?” trong `exercises/README.md`.
+2. Làm lần lượt `exercise-01.js` và `exercise-02.js`.
+3. Thử ít nhất hai input trước khi xem đáp án.
+4. Mở `SOLUTIONS.md` để so sánh và đọc giải thích.
+5. Đóng lời giải rồi tự viết lại bằng cách của bạn.
+
+> Lời giải chỉ là một cách tham khảo. Mục tiêu là hiểu vì sao code chạy, không phải ghi nhớ đáp án.

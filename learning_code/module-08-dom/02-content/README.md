@@ -43,3 +43,10 @@ Ví dụ này áp dụng cùng kiến thức vào dữ liệu gần với ứng 
 - [ ] Thay dữ liệu đầu vào bằng ít nhất hai trường hợp khác.
 - [ ] Viết một ví dụ mới trong `index.js` mà không sao chép code mẫu.
 - [ ] Giải thích lại bài bằng lời của bạn.
+
+## Exercises
+
+- [Đề bài và file thực hành](./exercises/README.md)
+- [Lời giải có giải thích](./exercises/SOLUTIONS.md)
+
+> Tự làm trước, chỉ mở lời giải khi bạn đã thử ít nhất một lần.
