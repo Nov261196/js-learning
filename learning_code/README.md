@@ -2,6 +2,10 @@
 
 Lộ trình từ JavaScript cơ bản đến đủ nền tảng chuyển sang React.
 
+## Practice App
+
+Bạn có thể làm bài `Data Types và typeof` trực tiếp trên trình duyệt bằng [JavaScript Practice Lab](./exercise-app/README.md). App hỗ trợ chạy code, kiểm tra đáp án, gợi ý, lời giải và tự lưu tiến độ.
+
 ## Cách học
 
 1. Đọc README của module và từng bài.

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ứng dụng thực hành JavaScript dành cho người mới học" />
+    <title>JavaScript Practice Lab</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../README.md" aria-label="Về JavaScript Learning Roadmap">
+        <span class="brand-mark">JS</span>
+        <span>
+          <strong>Practice Lab</strong>
+          <small>Học bằng cách tự viết code</small>
+        </span>
+      </a>
+
+      <div class="progress-summary" aria-label="Tiến độ bài tập">
+        <span id="progressText">0 / 4 bài hoàn thành</span>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <aside class="sidebar">
+        <p class="eyebrow">Module 01</p>
+        <h1>Data Types &amp; typeof</h1>
+        <p class="sidebar-description">
+          Hiểu kiểu dữ liệu bằng cách dự đoán, chạy code và kiểm tra kết quả.
+        </p>
+
+        <nav aria-label="Danh sách bài tập">
+          <ol id="exerciseList" class="exercise-list"></ol>
+        </nav>
+
+        <button id="resetProgressButton" class="button button-ghost button-full" type="button">
+          Xóa tiến độ
+        </button>
+      </aside>
+
+      <main class="workspace">
+        <section class="lesson-panel" aria-labelledby="exerciseTitle">
+          <div class="lesson-heading">
+            <div>
+              <p id="exerciseNumber" class="eyebrow"></p>
+              <h2 id="exerciseTitle"></h2>
+            </div>
+            <span id="exerciseStatus" class="status-badge">Chưa hoàn thành</span>
+          </div>
+
+          <div class="purpose-card">
+            <h3>Bài này để làm gì?</h3>
+            <p id="exercisePurpose"></p>
+          </div>
+
+          <div class="instructions">
+            <h3>Yêu cầu</h3>
+            <ol id="requirementsList"></ol>
+          </div>
+
+          <details class="concept-card">
+            <summary>Kiến thức cần nhớ</summary>
+            <div id="conceptContent"></div>
+          </details>
+
+          <details class="hint-card">
+            <summary>Xem gợi ý</summary>
+            <p id="exerciseHint"></p>
+          </details>
+        </section>
+
+        <section class="code-panel" aria-label="Khu vực viết code">
+          <div class="panel-toolbar">
+            <div>
+              <span class="traffic-dot red"></span>
+              <span class="traffic-dot yellow"></span>
+              <span class="traffic-dot green"></span>
+              <span class="file-name">exercise.js</span>
+            </div>
+            <button id="resetCodeButton" class="text-button" type="button">Làm lại code</button>
+          </div>
+
+          <label class="sr-only" for="codeEditor">Nhập code JavaScript</label>
+          <textarea id="codeEditor" class="code-editor" spellcheck="false"></textarea>
+
+          <div class="action-bar">
+            <button id="runButton" class="button button-secondary" type="button">Chạy code</button>
+            <button id="checkButton" class="button button-primary" type="button">Kiểm tra bài</button>
+          </div>
+
+          <div class="console-panel">
+            <div class="console-heading">
+              <h3>Console</h3>
+              <button id="clearConsoleButton" class="text-button" type="button">Xóa</button>
+            </div>
+            <pre id="consoleOutput" class="console-output" aria-live="polite">Nhấn “Chạy code” để xem kết quả.</pre>
+          </div>
+
+          <div id="feedback" class="feedback" aria-live="polite" hidden></div>
+
+          <details id="solutionPanel" class="solution-panel">
+            <summary>Xem lời giải tham khảo</summary>
+            <p class="solution-warning">Hãy tự thử ít nhất một lần trước khi xem lời giải.</p>
+            <pre><code id="solutionCode"></code></pre>
+            <div id="solutionExplanation" class="solution-explanation"></div>
+          </details>
+
+          <div class="navigation-buttons">
+            <button id="previousButton" class="button button-ghost" type="button">← Bài trước</button>
+            <button id="nextButton" class="button button-secondary" type="button">Bài tiếp →</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
