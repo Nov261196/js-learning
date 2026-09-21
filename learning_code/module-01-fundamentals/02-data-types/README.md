@@ -78,6 +78,80 @@ console.log(double("5")); // Dữ liệu phải là number
 
 `double(5)` nhận number nên thực hiện phép nhân. `double("5")` nhận string nên trả thông báo thay vì tiếp tục tính.
 
+## Áp dụng trong dự án thực tế
+
+Bạn thường không dùng `typeof` như một tính năng riêng. Nó nằm bên trong bước **kiểm tra dữ liệu** trước khi ứng dụng tính toán hoặc hiển thị giao diện.
+
+| Dữ liệu trong dự án | Kiểu thường gặp | Tác dụng của việc kiểm tra |
+| --- | --- | --- |
+| Giá trị nhập từ form | `string` | Chuyển thành number trước khi tính toán |
+| Trạng thái đăng nhập | `boolean` | Quyết định giao diện nào được hiển thị |
+| Danh sách từ API | `array` | Đảm bảo có thể dùng `map`, `filter` |
+| Chưa chọn sản phẩm/user | `null` | Tránh đọc thuộc tính khi chưa có dữ liệu |
+| Field bị thiếu từ API | `undefined` | Hiển thị giá trị mặc định hoặc thông báo lỗi |
+
+### Tình huống 1 - Tính tổng từ form sản phẩm
+
+Giá trị lấy từ ô input là string, kể cả khi người dùng nhập số:
+
+```js
+const priceInput = "100";
+const quantityInput = "2";
+
+console.log(typeof priceInput); // "string"
+
+const price = Number(priceInput);
+const quantity = Number(quantityInput);
+
+if (typeof price === "number" && typeof quantity === "number") {
+  console.log(price * quantity); // 200
+}
+```
+
+Trong Product App hoặc giỏ hàng, bạn phải chuyển dữ liệu form thành number trước khi tính tổng.
+
+### Tình huống 2 - Hiển thị theo trạng thái đăng nhập
+
+```js
+let isLoggedIn = false;
+
+const buttonText = isLoggedIn ? "Đăng xuất" : "Đăng nhập";
+console.log(buttonText); // "Đăng nhập"
+```
+
+Trong ứng dụng thật, boolean như `isLoggedIn` có thể quyết định hiển thị nút nào, cho phép mở trang nào hoặc có gọi API cá nhân hay không.
+
+### Tình huống 3 - Kiểm tra dữ liệu từ API
+
+```js
+const products = [{ id: 1, name: "Bàn phím" }];
+const selectedProduct = null;
+
+if (Array.isArray(products)) {
+  console.log(`Có ${products.length} sản phẩm`);
+}
+
+if (selectedProduct === null) {
+  console.log("Chưa chọn sản phẩm");
+}
+```
+
+Trong Product App, array chứa danh sách sản phẩm; `null` biểu thị chưa chọn sản phẩm nào. Kiểm tra trước giúp app không bị lỗi khi render.
+
+### Luồng bạn sẽ gặp trong project
+
+```text
+Người dùng nhập / API trả dữ liệu
+              ↓
+Kiểm tra kiểu dữ liệu
+              ↓
+Chuyển đổi hoặc xử lý dữ liệu
+              ↓
+Hiển thị lên giao diện
+```
+
+`typeof` chủ yếu được dùng ở bước kiểm tra. Sau này khi học React, các biến boolean, array, object và null sẽ được dùng rất nhiều để quản lý state và render giao diện.
+
 ## Các kết quả thường gặp
 
 | Giá trị | Kết quả `typeof` | Ý nghĩa |

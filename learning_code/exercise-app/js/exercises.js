@@ -3,6 +3,11 @@ export const exercises = [
     id: "data-types-01",
     title: "Kiểm tra 5 kiểu dữ liệu",
     purpose: "Hiểu typeof trả về tên kiểu dữ liệu nào cho từng giá trị JavaScript cơ bản.",
+    projectUse: [
+      "Form thanh toán: kiểm tra giá và số lượng có thật sự là number trước khi tính tổng.",
+      "Dữ liệu API: kiểm tra một field đang là string, boolean hay chưa có giá trị trước khi hiển thị.",
+      "Debug: tìm nguyên nhân phép cộng cho kết quả sai vì dữ liệu số đang ở dạng string.",
+    ],
     requirements: [
       "Tạo biến userName chứa một string.",
       "Tạo biến age chứa một number.",
@@ -57,6 +62,11 @@ console.log(typeof user);       // object`,
     id: "data-types-02",
     title: "Dự đoán kết quả typeof",
     purpose: "Phân biệt giá trị nhìn giống nhau nhưng có kiểu khác nhau, đặc biệt là chuỗi \"10\" và số 10.",
+    projectUse: [
+      "Form sản phẩm: giá trị lấy từ input luôn bắt đầu là string, kể cả khi người dùng nhập số.",
+      "Giỏ hàng: phải đổi \"10\" thành 10 trước khi cộng giá hoặc số lượng.",
+      "URL và localStorage: dữ liệu đọc ra thường là chuỗi nên cần chuyển kiểu trước khi sử dụng.",
+    ],
     requirements: [
       "Trước khi chạy, dự đoán kết quả của typeof \"10\", 10, true và undefined.",
       "Dùng console.log để in bốn kết quả theo đúng thứ tự trên.",
@@ -99,6 +109,11 @@ console.log(typeof undefined); // undefined`,
     id: "data-types-03",
     title: "Đổi trạng thái đăng nhập",
     purpose: "Hiểu giá trị của biến có thể đổi trong khi kiểu dữ liệu vẫn giữ nguyên.",
+    projectUse: [
+      "Ứng dụng đăng nhập: isLoggedIn quyết định hiển thị nút Đăng nhập hay Đăng xuất.",
+      "Bảo vệ trang: chỉ cho người đã đăng nhập mở trang hồ sơ hoặc thanh toán.",
+      "Giao diện: boolean thường điều khiển mở/đóng modal, loading và trạng thái hoàn thành.",
+    ],
     requirements: [
       "Khai báo isLoggedIn bằng let với giá trị false.",
       "In giá trị và typeof của isLoggedIn.",
@@ -145,6 +160,11 @@ console.log(typeof isLoggedIn); // boolean`,
     id: "data-types-04",
     title: "Array và null",
     purpose: "Nhận biết hai trường hợp đặc biệt mà typeof trả về object và biết cách kiểm tra chính xác hơn.",
+    projectUse: [
+      "Danh sách sản phẩm từ API phải là array trước khi dùng map để render giao diện.",
+      "selectedUser = null biểu thị hiện chưa có người dùng nào được chọn.",
+      "Trang chi tiết cần kiểm tra null trước khi đọc selectedUser.name để tránh ứng dụng bị lỗi.",
+    ],
     requirements: [
       "Tạo biến tags chứa một array và selectedUser có giá trị null.",
       "In typeof của tags và selectedUser.",

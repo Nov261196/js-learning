@@ -5,6 +5,7 @@
 ## Chức năng
 
 - Đọc mục đích và yêu cầu của từng bài.
+- Xem kiến thức đó được dùng ở đâu trong dự án thực tế.
 - Viết và chạy JavaScript ngay trên trang.
 - Xem output hoặc lỗi trong console tích hợp.
 - Kiểm tra bài tự động.

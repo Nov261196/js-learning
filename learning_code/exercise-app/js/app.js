@@ -7,6 +7,7 @@ const elements = {
   exerciseNumber: document.querySelector("#exerciseNumber"),
   exerciseTitle: document.querySelector("#exerciseTitle"),
   exercisePurpose: document.querySelector("#exercisePurpose"),
+  projectUseList: document.querySelector("#projectUseList"),
   requirementsList: document.querySelector("#requirementsList"),
   conceptContent: document.querySelector("#conceptContent"),
   exerciseHint: document.querySelector("#exerciseHint"),
@@ -82,6 +83,9 @@ function renderExercise() {
   elements.exerciseNumber.textContent = `Bài ${state.currentIndex + 1} / ${exercises.length}`;
   elements.exerciseTitle.textContent = exercise.title;
   elements.exercisePurpose.textContent = exercise.purpose;
+  elements.projectUseList.innerHTML = exercise.projectUse
+    .map(item => `<li>${item}</li>`)
+    .join("");
   elements.requirementsList.innerHTML = exercise.requirements
     .map(requirement => `<li>${requirement}</li>`)
     .join("");

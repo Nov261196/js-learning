@@ -8,7 +8,60 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="topbar">
+    <main id="authView" class="auth-view">
+      <section class="auth-card" aria-labelledby="authTitle">
+        <div class="auth-intro">
+          <span class="brand-mark">JS</span>
+          <p class="eyebrow">JavaScript Learning</p>
+          <h1 id="authTitle">Học từng bài, thấy rõ tiến độ</h1>
+          <p>Đăng nhập để lưu code, bài đã hoàn thành và phần trăm của toàn bộ khóa học.</p>
+        </div>
+
+        <div class="auth-form-panel">
+          <div class="auth-tabs" role="tablist" aria-label="Tài khoản">
+            <button id="loginTab" class="auth-tab active" type="button" role="tab">Đăng nhập</button>
+            <button id="registerTab" class="auth-tab" type="button" role="tab">Đăng ký</button>
+          </div>
+
+          <form id="loginForm" class="auth-form">
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" placeholder="ban@example.com" required />
+            </label>
+            <label>
+              Mật khẩu
+              <input name="password" type="password" autocomplete="current-password" minlength="6" required />
+            </label>
+            <button class="button button-primary" type="submit">Đăng nhập</button>
+          </form>
+
+          <form id="registerForm" class="auth-form" hidden>
+            <label>
+              Tên của bạn
+              <input name="name" type="text" autocomplete="name" minlength="2" placeholder="Nguyễn Văn An" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" placeholder="ban@example.com" required />
+            </label>
+            <label>
+              Mật khẩu
+              <input name="password" type="password" autocomplete="new-password" minlength="6" required />
+            </label>
+            <label>
+              Nhập lại mật khẩu
+              <input name="confirmPassword" type="password" autocomplete="new-password" minlength="6" required />
+            </label>
+            <button class="button button-primary" type="submit">Tạo tài khoản</button>
+          </form>
+
+          <p id="authMessage" class="auth-message" aria-live="polite"></p>
+          <p class="auth-note">Tài khoản demo được lưu trong trình duyệt này, không dùng cho dữ liệu quan trọng.</p>
+        </div>
+      </section>
+    </main>
+
+    <header id="topbar" class="topbar" hidden>
       <a class="brand" href="../README.md" aria-label="Về JavaScript Learning Roadmap">
         <span class="brand-mark">JS</span>
         <span>
@@ -18,14 +71,25 @@
       </a>
 
       <div class="progress-summary" aria-label="Tiến độ bài tập">
-        <span id="progressText">0 / 4 bài hoàn thành</span>
+        <span id="progressText">0 / 4 bài typeof hoàn thành</span>
         <div class="progress-track">
           <div id="progressBar" class="progress-bar"></div>
         </div>
       </div>
+
+      <div class="account-menu">
+        <button id="openCourseButton" class="course-percent-button" type="button">
+          Khóa học <strong id="headerCoursePercent">0%</strong>
+        </button>
+        <div class="user-summary">
+          <span id="userAvatar" class="user-avatar">A</span>
+          <span id="userName">Học viên</span>
+        </div>
+        <button id="logoutButton" class="text-button" type="button">Đăng xuất</button>
+      </div>
     </header>
 
-    <div class="app-shell">
+    <div id="appShell" class="app-shell" hidden>
       <aside class="sidebar">
         <p class="eyebrow">Module 01</p>
         <h1>Data Types &amp; typeof</h1>
@@ -36,6 +100,20 @@
         <nav aria-label="Danh sách bài tập">
           <ol id="exerciseList" class="exercise-list"></ol>
         </nav>
+
+        <section class="course-progress-card">
+          <div>
+            <span>Tiến độ khóa học</span>
+            <strong id="coursePercent">0%</strong>
+          </div>
+          <div class="progress-track">
+            <div id="courseProgressBar" class="progress-bar course-progress-bar"></div>
+          </div>
+          <p id="courseProgressText">0 / 80 bài hoàn thành</p>
+          <button id="viewCourseButton" class="button button-secondary button-full" type="button">
+            Xem toàn bộ khóa học
+          </button>
+        </section>
 
         <button id="resetProgressButton" class="button button-ghost button-full" type="button">
           Xóa tiến độ
@@ -55,6 +133,11 @@
           <div class="purpose-card">
             <h3>Bài này để làm gì?</h3>
             <p id="exercisePurpose"></p>
+          </div>
+
+          <div class="project-use-card">
+            <h3>Trong dự án dùng ở đâu?</h3>
+            <ul id="projectUseList"></ul>
           </div>
 
           <div class="instructions">
@@ -116,6 +199,22 @@
         </section>
       </main>
     </div>
+
+    <dialog id="courseDialog" class="course-dialog">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">Course progress</p>
+          <h2>Tiến độ toàn khóa JavaScript</h2>
+          <p id="dialogProgressText"></p>
+        </div>
+        <button id="closeCourseButton" class="dialog-close" type="button" aria-label="Đóng">×</button>
+      </div>
+      <div class="dialog-progress-track">
+        <div id="dialogProgressBar" class="progress-bar"></div>
+      </div>
+      <p class="dialog-help">Đánh dấu khi bạn đã đọc bài, tự code lại ví dụ và hoàn thành exercises.</p>
+      <div id="courseModuleList" class="course-module-list"></div>
+    </dialog>
 
     <script type="module" src="./js/app.js"></script>
   </body>
