@@ -4,7 +4,7 @@ Lộ trình từ JavaScript cơ bản đến đủ nền tảng chuyển sang Re
 
 ## Practice App
 
-Bạn có thể làm bài `Data Types và typeof` trực tiếp trên trình duyệt bằng [JavaScript Practice Lab](./exercise-app/README.md). App hỗ trợ chạy code, kiểm tra đáp án, gợi ý, lời giải và tự lưu tiến độ.
+Bạn có thể học toàn bộ 16 module và 80 bài trong [JavaScript Full Course](./exercise-app/course.html). App hỗ trợ đọc bài, exercises, lời giải, chạy code, khóa bài theo thứ tự và tự lưu tiến độ. Riêng `Data Types và typeof` có Practice Lab chấm code tự động.
 
 ## Cách học
 
