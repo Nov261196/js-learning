@@ -1,4 +1,0 @@
-* { box-sizing: border-box; }
-body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fb; color: #1f2937; }
-.container { width: min(900px, 90%); margin: 48px auto; padding: 24px; background: white; border-radius: 12px; }
-button, input, select { font: inherit; }
