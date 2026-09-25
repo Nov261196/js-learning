@@ -170,3 +170,13 @@ export function highlightLessonHtml(html) {
 export function highlightLessonText(value) {
   return highlightLessonHtml(escapeHtml(String(value)));
 }
+
+export function highlightApplicationText(value) {
+  const text = String(value).trim();
+  const boundary = text.match(/\s+(như|để|khi|mà|trước khi)\s+/i);
+  if (!boundary?.index) return highlightLessonText(text);
+
+  const lead = text.slice(0, boundary.index);
+  const detail = text.slice(boundary.index);
+  return `<strong class="application-highlight">${highlightLessonText(lead)}</strong>${highlightLessonText(detail)}`;
+}

@@ -29,6 +29,7 @@ test("lesson content creates required tasks and a solution", () => {
   assert.match(content.realWorldUse, /<li(?:\s[^>]*)?>/);
   assert.match(content.moduleGoals, /<li(?:\s[^>]*)?>/);
   assert.match(content.purpose, /lesson-highlight/);
+  assert.match(content.realWorldUse, /application-highlight/);
   assert.doesNotMatch(content.realWorldUse, /text-danger/);
   assert.equal(progress.checklists[`${lesson.id}:required-exercises:count`], lesson.exercises.length);
 });

@@ -4,6 +4,7 @@ import { exercises } from "../data/practice.data.js";
 import { customSolutions } from "../data/solution.data.js";
 import {
   escapeContent,
+  highlightApplicationText,
   highlightLessonHtml,
   highlightLessonText,
   renderMarkdown,
@@ -88,7 +89,7 @@ export class CourseModel {
     return {
       purpose: highlightLessonHtml(renderMarkdown(lesson.summary)),
       realWorldUse: (practicalApplications[module.id] ?? [])
-        .map((application) => `<li>${highlightLessonText(application)}</li>`)
+        .map((application) => `<li>${highlightApplicationText(application)}</li>`)
         .join(""),
       moduleGoals: module.goals
         .map((goal) => `<li>${highlightLessonText(goal)}</li>`)

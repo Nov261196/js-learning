@@ -9,7 +9,6 @@ export function topbar(user, lessonCount, completedCourseIds = []) {
         <span class="brand-copy"><strong>VUDN</strong><small>JavaScript · học bằng thực hành</small></span>
       </a>
       <div class="d-flex align-items-center gap-3">
-        <button class="btn btn-outline-light d-none d-lg-inline-flex" type="button" data-open-practice>Luyện tập nhanh</button>
         <button class="course-summary btn d-none d-md-flex align-items-center gap-3" type="button" data-open-catalog>
           <span class="percent-ring">${coursePercent}%</span><span class="text-start"><small>Tiến độ khóa học</small><strong>Xem 16 module</strong></span>
         </button>
