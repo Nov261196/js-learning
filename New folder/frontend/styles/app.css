@@ -702,7 +702,11 @@ button:disabled {
   color: #fff4a3;
 }
 .lesson-application-details > summary {
-  color: #bfdbfe;
+  color: var(--lab-blue);
+  text-shadow: 0 0 16px rgba(96, 165, 250, 0.2);
+}
+.lesson-application-details[open] > summary {
+  color: #93c5fd;
 }
 .module-goals-details > summary {
   color: #ddd6fe;
@@ -722,6 +726,9 @@ button:disabled {
 }
 .lesson-application-details li::marker {
   color: var(--lab-blue);
+}
+.lesson-application-details .details-body li {
+  color: #b9c9e7;
 }
 .module-goals-details li::marker {
   color: #a78bfa;
@@ -788,8 +795,11 @@ button:disabled {
   background: #4ade80;
 }
 .code-editor {
-  flex: 1 1 380px;
-  min-height: 340px;
+  width: 100%;
+  height: clamp(240px, 38vh, 420px);
+  min-height: 180px;
+  max-height: 70vh;
+  flex: 0 0 auto;
   resize: vertical;
   padding: 22px;
   border: 0;
@@ -1076,7 +1086,9 @@ button:disabled {
     min-height: 680px;
   }
   .code-editor {
-    min-height: 320px;
+    height: 300px;
+    min-height: 180px;
+    max-height: 60vh;
     padding: 16px;
     font-size: 13px;
   }
